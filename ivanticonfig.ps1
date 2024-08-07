@@ -16,7 +16,7 @@ $res = wmic product get name,localPackage | Select-String -Pattern "Ivanti Appli
 # (Get-CimInstance -ClassName Win32_Product | Where-Object Name -Like "Ivanti*").InstallLocation
 
 if ($res) {
-    Write-Host "[+] Installer found (open as ZIP and extract Configuration.xml):"
+    Write-Host "[+] Installer found (open as ZIP and extract configuration):"
     Write-Host "$tab $res"
 } else {
     Write-Host "[-] No installer found"
